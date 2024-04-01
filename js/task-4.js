@@ -1,20 +1,6 @@
 "use strict"
 
-const getTotalBalanceByGender = (users, gender) => {
-    // users — масив об’єктів користувачів,
-    //  gender — рядок, що зберігає стать.
-    // Функція має використовувати ланцюжок виклику методів та повертати загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender
-
-    if (!Array.isArray(users) || typeof gender !== 'string') return 'incorect data'
-
-    let totalBalanceToGender = 0 
-
-    users.filter( el => el.gender === gender).map( el => totalBalanceToGender += el.balance || 0)
-    // якщо поле баланс відсутнє, то додасть 0, інакше буде NaN
-
-    return totalBalanceToGender
-
-}
+const getTotalBalanceByGender = (users, gender) => users.filter( el => el.gender === gender).reduce(( prev, el ) => prev + el.balance, 0)
 
 console.log('--------------------')
 console.log('------ 4 TASK ------')

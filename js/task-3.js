@@ -1,15 +1,6 @@
 "use strict"
 
-const sortByDescendingFriendCount = users => {
-    // users — масив об’єктів користувачів.
-    // повертає масив усіх користувачів, відсортованих за спаданням кількостій їх друзів (властивість friends)
-
-    if (!Array.isArray(users)) return 'incorect data'
-
-    const usersSortedByDescendingFriends = users.toSorted( (el, nextEl) => - el.friends.length + nextEl.friends.length)
-
-    return usersSortedByDescendingFriends
-}
+const sortByDescendingFriendCount = users => users.toSorted( (el, nextEl) => - el.friends.length + nextEl.friends.length)
 
 console.log('--------------------')
 console.log('------ 3 TASK ------')

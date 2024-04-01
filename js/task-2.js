@@ -1,18 +1,6 @@
 "use strict"
 
-const getUsersWithFriend = (users, friendName) => {
-
-  // параметр users — масив об’єктів користувачів
-  //  параметр friendName — ім’я друга для пошуку.
-  // має повертати масив усіх користувачів із масиву users, у яких є друг з іменем friendName
-
-  if (!Array.isArray(users) || typeof friendName !== 'string') return 'incorect data'
-
-  const usersWithFriend = users.filter( el => el.friends.includes(friendName))
-
-  return usersWithFriend
-
-}
+const getUsersWithFriend = (users, friendName) => users.filter( el => el.friends.includes(friendName))
 
 console.log('--------------------')
 console.log('------ 2 TASK ------')

@@ -1,15 +1,6 @@
 "use strict"
 
-const getUserNames = users => {
-  // users — масив об’єктів користувачів
-  // має повертати масив імен усіх користувачів (властивість name) із масиву users.
-
-  if (!Array.isArray(users)) return 'incorect data'
-
-  const userNames = users.map( el => el.name)
-
-  return userNames
-}
+const getUserNames = users => users.map( el => el.name)
 
 console.log(
   getUserNames([
