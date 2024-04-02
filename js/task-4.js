@@ -1,6 +1,6 @@
 "use strict"
 
-const getTotalBalanceByGender = (users, gender) => users.filter( el => el.gender === gender).reduce(( total, el ) => total + el.balance)
+const getTotalBalanceByGender = (users, gender) => users.filter( el => el.gender === gender).reduce(( total, el ) => total + el.balance, 0)
 
 console.log('--------------------')
 console.log('------ 4 TASK ------')
